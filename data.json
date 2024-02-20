@@ -41,13 +41,20 @@
       "img": "https://image.tmdb.org/t/p/original/neWmzIPgz5s1htN80RdbS2frl04.jpg"
     },
     {
-      "id": "mr2hz4y",
-      "createdAt": 1708424076377,
-      "title": "New Movie",
-      "director": "New Director",
-      "runtime": 0,
-      "img": "",
-      "social": ""
+      "title": "Poor Things",
+      "director": "",
+      "social": "@porthings",
+      "img": "https://m.media-amazon.com/images/M/MV5BNGIyYWMzNjktNDE3MC00YWQyLWEyMmEtN2ZmNzZhZDk3NGJlXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg",
+      "runtime": "141",
+      "id": "mr2hz4y"
+    },
+    {
+      "title": "Turning Red",
+      "director": "Domee Shi",
+      "social": "@PixarTurningRed",
+      "img": "https://huntington.org/sites/default/files/2023-07/turning-red-approved-sq.jpg",
+      "runtime": "149",
+      "id": "lis80ha"
     }
   ]
 }

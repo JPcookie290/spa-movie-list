@@ -45,7 +45,9 @@ export async function createMovie() {
   };
   await fetch("http://localhost:5001/movies", {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+    },
     body: JSON.stringify(movie),
   });
   return movie;
@@ -53,9 +55,31 @@ export async function createMovie() {
 
 export async function getMovie(id: string) {
   await fakeDelay(`getMovie:${id}`);
-  const movie: Movie = await fetch(`http://localhost5001/movies/${id}`).then(
+  const movie: Movie = await fetch(`http://localhost:5001/movies/${id}`).then(
     (res) => res.json()
   );
-  console.log(movie);
+  //console.log(movie);
   return movie;
+}
+
+export async function updateMovie(id: string, movie: Movie) {
+  await fakeDelay();
+  await fetch(`http://localhost:5001/movies/${id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(movie),
+  });
+  return movie;
+}
+
+export async function deleteMovie(id: string) {
+  await fakeDelay();
+  await fetch(`http://localhost:5001/movies/${id}`, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
 }

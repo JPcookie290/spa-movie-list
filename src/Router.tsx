@@ -5,6 +5,8 @@ import RootElement, {
   action as rootAction,
 } from "./RootElement";
 import Movie, { loader as movieLoader } from "./Movie";
+import EditMovie, { action as editAction } from "./EditMovie";
+import { action as destroyAction } from "./Destroy";
 
 export default function Router() {
   const router = createBrowserRouter([
@@ -18,8 +20,17 @@ export default function Router() {
         {
           path: "/movies/:id", // => :id ist ein Platzhalter für eine beliebige Zahl (z.B.: /movies/1)
           element: <Movie />,
-          // TODO WWWWHHHHHHHHHHYYYYYYYYYYY??????????????
           loader: movieLoader as any,
+        },
+        {
+          path: "/movies/:id/edit",
+          element: <EditMovie />,
+          loader: movieLoader as any,
+          action: editAction as any,
+        },
+        {
+          path: "/movies/:id/destroy",
+          action: destroyAction as any,
         },
       ],
     },

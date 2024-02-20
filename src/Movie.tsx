@@ -16,7 +16,7 @@ export type MovieType = {
 
 export default function Movie() {
   const { movie } = useLoaderData() as { movie: MovieType };
-  console.log(movie);
+  //   console.log(movie);
 
   return (
     <div id="movie">

@@ -1,4 +1,11 @@
-import { Outlet, Link, useLoaderData, Form } from "react-router-dom";
+import {
+  Outlet,
+  NavLink,
+  useLoaderData,
+  Form,
+  redirect,
+  useNavigation,
+} from "react-router-dom";
 import { getMovies, createMovie, Movie } from "./handleMovies";
 
 export async function loader() {
@@ -8,11 +15,12 @@ export async function loader() {
 
 export async function action() {
   const movie = await createMovie();
-  return { movie };
+  return redirect(`/movies/${movie.id}/edit`);
 }
 
 export default function RootElement() {
   const { movies } = useLoaderData() as { movies: Movie[] };
+  const navigate = useNavigation();
   return (
     <>
       <div id="sidebar">
@@ -36,15 +44,25 @@ export default function RootElement() {
           <ul>
             {movies.map((movie) => [
               <li key={movie.id}>
-                <Link to={`/movies/${movie.id}`}>
+                <NavLink
+                  to={`/movies/${movie.id}`}
+                  className={({ isActive, isPending }) => {
+                    return isActive ? "active" : isPending ? "pending" : "";
+                  }}
+                >
                   {movie.title ? movie.title : "no title"}
-                </Link>
+                </NavLink>
               </li>,
             ])}
           </ul>
         </nav>
       </div>
-      <div id="content">{<Outlet />}</div>
+      <div
+        id="content"
+        className={navigate.state === "loading" ? "loading" : ""}
+      >
+        {<Outlet />}
+      </div>
     </>
   );
 }
