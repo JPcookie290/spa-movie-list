@@ -1,0 +1,53 @@
+{
+  "movies": [
+    {
+      "id": "1",
+      "title": "Killers of the Flower Moon",
+      "director": "Martin Scorcese",
+      "runtime": 206,
+      "social": "@killersoftheflowermoon",
+      "img": "https://images.squarespace-cdn.com/content/v1/5bbcad0f2727be3646b9fee1/8b845be0-f31e-4ffc-a43b-ab96c189efde/F96BFCDE-37B8-442B-84B1-A0919CA0D9F7.jpeg"
+    },
+    {
+      "id": "2",
+      "title": "Asteroid City",
+      "director": "Wes Anderson",
+      "runtime": 145,
+      "social": "@AsteroidCity",
+      "img": "https://posterspy.com/wp-content/uploads/2023/06/Asteroid-City-PosterSpy.jpg"
+    },
+    {
+      "id": "3",
+      "title": "The Whale",
+      "director": "Darren Aronofsky",
+      "runtime": 157,
+      "social": "@TheWhaleMov",
+      "img": "https://shop.plaionpictures.com/media/d8/ee/3e/1682572644/TheWhale__DVD__2D.jpg"
+    },
+    {
+      "id": "4",
+      "title": "Dune: Part One",
+      "director": "Denis Villeneuve",
+      "runtime": 176,
+      "social": "@dune_two",
+      "img": "https://posterspy.com/wp-content/uploads/2023/05/Dune-2-Poster-4x5-1.jpg"
+    },
+    {
+      "runtime": 154,
+      "director": "Greta Gerwig",
+      "title": "The Barbie Movie",
+      "id": "5",
+      "social": "@barbiethemovie",
+      "img": "https://image.tmdb.org/t/p/original/neWmzIPgz5s1htN80RdbS2frl04.jpg"
+    },
+    {
+      "id": "mr2hz4y",
+      "createdAt": 1708424076377,
+      "title": "New Movie",
+      "director": "New Director",
+      "runtime": 0,
+      "img": "",
+      "social": ""
+    }
+  ]
+}

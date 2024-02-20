@@ -7,11 +7,17 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "json-server": "json-server -p 5001 -w data.json"
   },
   "dependencies": {
+    "@fontsource/roboto": "^5.0.8",
+    "@types/sort-by": "^1.2.3",
+    "json-server": "^1.0.0-alpha.23",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.1",
+    "sort-by": "^1.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.55",
