@@ -17,28 +17,20 @@
       "img": "https://posterspy.com/wp-content/uploads/2023/06/Asteroid-City-PosterSpy.jpg"
     },
     {
-      "id": "3",
-      "title": "The Whale",
-      "director": "Darren Aronofsky",
-      "runtime": 157,
-      "social": "@TheWhaleMov",
-      "img": "https://shop.plaionpictures.com/media/d8/ee/3e/1682572644/TheWhale__DVD__2D.jpg"
-    },
-    {
-      "id": "4",
-      "title": "Dune: Part One",
+      "title": "Dune: Part Two",
       "director": "Denis Villeneuve",
-      "runtime": 176,
       "social": "@dune_two",
-      "img": "https://posterspy.com/wp-content/uploads/2023/05/Dune-2-Poster-4x5-1.jpg"
+      "img": "https://posterspy.com/wp-content/uploads/2023/05/Dune-2-Poster-4x5-1.jpg",
+      "runtime": "176",
+      "id": "4"
     },
     {
-      "runtime": 154,
-      "director": "Greta Gerwig",
       "title": "The Barbie Movie",
-      "id": "5",
+      "director": "Greta Gerwig",
       "social": "@barbiethemovie",
-      "img": "https://image.tmdb.org/t/p/original/neWmzIPgz5s1htN80RdbS2frl04.jpg"
+      "img": "https://image.tmdb.org/t/p/original/neWmzIPgz5s1htN80RdbS2frl04.jpg",
+      "runtime": "114",
+      "id": "5"
     },
     {
       "title": "Poor Things",
@@ -53,8 +45,16 @@
       "director": "Domee Shi",
       "social": "@PixarTurningRed",
       "img": "https://huntington.org/sites/default/files/2023-07/turning-red-approved-sq.jpg",
-      "runtime": "149",
+      "runtime": "100",
       "id": "lis80ha"
+    },
+    {
+      "title": "Dune: Part One",
+      "director": "Denis Villeneuv",
+      "social": "@dunemovie",
+      "img": "https://www.posterhub.com.sg/images/detailed/125/dune_f.jpg",
+      "runtime": "155",
+      "id": "0uvokff"
     }
   ]
 }

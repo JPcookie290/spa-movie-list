@@ -5,12 +5,16 @@ import {
   Form,
   redirect,
   useNavigation,
+  useSubmit,
 } from "react-router-dom";
 import { getMovies, createMovie, Movie } from "./handleMovies";
+import { useEffect } from "react";
 
-export async function loader() {
-  const movies = await getMovies();
-  return { movies };
+export async function loader({ request }: { request: Request }) {
+  const url = new URL(request.url);
+  const term = url.searchParams.get("term");
+  const movies = await getMovies(term!);
+  return { movies, term };
 }
 
 export async function action() {
@@ -19,23 +23,38 @@ export async function action() {
 }
 
 export default function RootElement() {
-  const { movies } = useLoaderData() as { movies: Movie[] };
+  const { movies, term } = useLoaderData() as { movies: Movie[]; term: string };
   const navigate = useNavigation();
+  const submit = useSubmit();
+
+  const searching =
+    navigate.location &&
+    new URLSearchParams(navigate.location.search).has("term");
+
+  useEffect(() => {
+    (document.getElementById("term")! as HTMLInputElement).value = term;
+  }, [term]);
+
   return (
     <>
       <div id="sidebar">
         <div>
-          <form id="search-form" role="search">
+          <Form id="search-form" role="search">
             <input
               id="term"
+              className={searching ? "searching" : ""}
               aria-label="Search Movies"
               placeholder="Moviename"
               type="search"
               name="term"
+              defaultValue={term}
+              onChange={(e) => {
+                submit(e.currentTarget.form!);
+              }}
             />
-            <div id="search-spinner" aria-hidden hidden={true} />
+            <div id="search-spinner" aria-hidden hidden={!searching} />
             <div className="sr-only" aria-live="polite"></div>
-          </form>
+          </Form>
           <Form method="post">
             <button type="submit">Add</button>
           </Form>
